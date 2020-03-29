@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - added .editorconfig file
 - added .gitignore file
 - added message when removing files during uninstallation
+- started modularizing the code
 
 ### Changed
 - convert to Python 3
@@ -25,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - convert translation README to MarkDown
 
 ### Fixed
+- fixed some GTK deprecation warnings
 - fixed wrong icons directory for gtk-update-icon-cache
 - fixed missing directories when uninstalling
 - fixed bug introduced by r420 with RCS VCS

@@ -75,6 +75,49 @@ Diffuse.  The `XDG_CONFIG_HOME` and `XDG_DATA_DIR` environment variables
 indicate where Diffuse should store persistent settings (eg. the path to a
 writable directory on the pen drive).
 
+## Developer setup
+
+### Run Diffuse from source
+
+To run Diffuse from the source code, type this:
+```bash
+python main.py
+```
+
+To debug with VS Code, open the directory in VS Code, place your breakpoints and hit F5.
+
+### Build Diffuse
+
+To build Diffuse, type this:
+```bash
+python setup.py build
+```
+
+To run from the build, type this:
+```bash
+PYTHONPATH=build/lib ./build/scripts-3.7/diffuse
+```
+
+### Install Diffuse locally
+
+To install Diffuse locally, type this:
+```bash
+python setup.py install --user
+```
+
+To run from local installation, type this:
+```bash
+~/.local/bin/diffuse
+```
+
+Or add `~/.local/bin` to your `PATH` and run `diffuse`.
+
+To remove the local installation, type this:
+```bash
+pip uninstall Diffuse
+rm ~/.local/bin/diffuse
+```
+
 ## Help Documentation
 
 Diffuse's help documentation is written in the DocBook format and can be easily
