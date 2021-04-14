@@ -840,7 +840,8 @@ class Preferences:
               [ 'Boolean', 'display_ignore_whitespace', False, _('Ignore white space differences') ],
               [ 'Boolean', 'display_ignore_whitespace_changes', False, _('Ignore changes to white space') ],
               [ 'Boolean', 'display_ignore_blanklines', False, _('Ignore blank line differences') ],
-              [ 'Boolean', 'display_ignore_endofline', False, _('Ignore end of line differences') ]
+              [ 'Boolean', 'display_ignore_endofline', False, _('Ignore end of line differences') ],
+              [ 'Boolean', 'display_4th_pane', True, _('Display 4th pane for merge conflicts with common ancestor') ]
             ],
             _('Alignment'),
             [ 'List',
@@ -1914,7 +1915,7 @@ class _Git:
                         panes.append((None, None))
                     else:
                         panes.append((k, ':3'))
-                    if x != 'A' and y != 'A':
+                    if x != 'A' and y != 'A' and prefs.getBool('display_4th_pane'):
                         panes.append((k, ':1'))
                     modified[k] = panes
             else:
